@@ -1,7 +1,7 @@
 # Mercedes-Benz-Greener-Manufacturing
 Applied stacking of predictive models (linear regression, random forest regressor, decision tree regressor and XGBoost) to predict the manufacturing time (continuous) based on a number of given variables.  
 
-##Libraries:
+## Libraries:
 1. pandas
 2. numpy
 3. matplotlib.pylot
@@ -10,12 +10,12 @@ Applied stacking of predictive models (linear regression, random forest regresso
 6. plotly
 7. xgboost
 
-##Files used:
+## Files used:
 1. The dataset the model was built on can be downloaded using [train.csv](https://github.com/pulkiB/Mercedes-Benz-Greener-Manufacturing/blob/master/train.csv)
 2. The dataset used to test the model can be downloaded using [test.csv](https://github.com/pulkiB/Mercedes-Benz-Greener-Manufacturing/blob/master/test.csv)
 3. My Python notebook where I built my model is [here] (https://github.com/pulkiB/Mercedes-Benz-Greener-Manufacturing/blob/master/Mercedes_Greener_Manufacturing.ipynb)
 
-##Part 1: Data Cleaning
+## Part 1: Data Cleaning
 I first determined the column types and counted them.
 ```
 dtype_df= train.dtypes.reset_index()
@@ -28,12 +28,12 @@ I then checked for any null values or NaN values in my train set. There weren't 
 Examining the dataset, I noticed that the first 10 columns (ID, y, X0, X1, X2, X3, X4, X5, X6, X8) were either float or object types, while the others appeared to be binary.
 To confirm whether the other columns were binary, I found the distribution of variables in each of these columns. Most columns were indeed binary (0,1), while the rest only contained 0 values. We did not need to consider the columns that only contained 0 in my model.
 
-##Part 2: Data Analysis and Visualization
+## Part 2: Data Analysis and Visualization
 I plotted the distribution of 'y' values against each individual column (X0, X1, X2, X3, X4, X5, X6, X8) to determine which variables had the highest level of variance with y. From the plots, we can see that X0 and X2 had a noticable effect.
 
 I then plotted the distribution of binary values per column. This was followed by a comparitive heatmap of the mean 'y' value distribution per binary value
 
-##Part 3: Building predictive models
+## Part 3: Building predictive models
 Now that I knew the distribution of our data, I needed to understand which variables had the greatest impact on the 'y' variable. To do so, I implemented Stacking algorithms.
 However, since I was going to be implemnting multiple predictive algorithms, I first created a class, that would simplify this building process, called sklearnHelper.
 The function `get_oof` was used to account for overfitting. It created multiple folds that would train the different levels of the model.
