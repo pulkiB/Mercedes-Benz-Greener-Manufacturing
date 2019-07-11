@@ -13,7 +13,7 @@ Applied stacking of predictive models (linear regression, random forest regresso
 ## Files used:
 1. The dataset the model was built on can be downloaded using [train.csv](https://github.com/pulkiB/Mercedes-Benz-Greener-Manufacturing/blob/master/train.csv)
 2. The dataset used to test the model can be downloaded using [test.csv](https://github.com/pulkiB/Mercedes-Benz-Greener-Manufacturing/blob/master/test.csv)
-3. My Python notebook where I built my model is [here] (https://github.com/pulkiB/Mercedes-Benz-Greener-Manufacturing/blob/master/Mercedes_Greener_Manufacturing.ipynb)
+3. My Python notebook where I built my model is [here](https://github.com/pulkiB/Mercedes-Benz-Greener-Manufacturing/blob/master/Mercedes_Greener_Manufacturing.ipynb)
 
 ## Part 1: Data Cleaning
 I first determined the column types and counted them.
